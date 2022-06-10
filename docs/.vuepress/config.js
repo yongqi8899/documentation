@@ -31,9 +31,7 @@ module.exports = {
           'Hundfutter/14_AddCartSuccess',
           'Hundfutter/15_Einkaufswagen',
           'Hundfutter/16_Anmelden und Register',
-          'Hundfutter/23_导航守卫',
-          'Hundfutter/24_订单与支付',
-          'Hundfutter/25_其它'
+          'Hundfutter/17_others'
         ]
       }
     ]

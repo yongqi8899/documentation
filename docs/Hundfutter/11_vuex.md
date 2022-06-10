@@ -1,6 +1,6 @@
-# 13. Vuex – State Management
+# 11. Vuex – State Management
 
-## 13.1 vuex单模块问题: 
+## 11.1 vuex单模块问题: 
   - 需要的管理状态数据比较多, 那对应的mutations/actions模块就会变得比较
   - 如果添加新的数据管理, 需要修改现在文件(不断向其添加内容) 
 - vuex多模块编程: 
@@ -10,7 +10,7 @@
 
 
 
-## 13.3. store/modules/home.js
+## 11.2. store/modules/home.js
 
 ```js
 /* 
@@ -59,7 +59,7 @@ export default {
 
 
 
-## 13.5. store/modules/user.js
+## 13.3. store/modules/user.js
 
 ```js
 /* 
@@ -77,7 +77,7 @@ export default {
 
 
 
-## 13.6. store/modules/index.js
+## 13.4. store/modules/index.js
 
 ```js
 /* 
@@ -95,7 +95,7 @@ export default {
 
 
 
-## 13.7. store/index.js
+## 13.4. store/index.js
 
 ```js
 /* 
@@ -114,7 +114,7 @@ export default new Vuex.Store({
 })
 ```
 
-## 13.8. 注册store
+## 13.5. 注册store
 - main.js
 ```js
 import store from './store'
@@ -126,6 +126,6 @@ new Vue({
 
  
 
-## 13.9. 使用调试工具查看state数据
+## 13.6. 使用调试工具查看state数据
 
 ![image-20201222212813157](./images/image-20201222212813157.png)
