@@ -1,309 +1,153 @@
-# 6. 引入vue-router
+# 6. vue-router
 
-## 6.1.下载依赖包
-```shell
-npm install vue-router
+## 6.1 code
+
+1. Routing-Komponente erstellen
 ```
-
-## 6.2. 编码
-
-1. pages/Home/index.vue
-```vue
-<template>
-  <div>Home</div>
-</template>
-
-<script>
-export default {
-  name: 'Home',
-  data () {
-    return {}
-  },
-}
-</script>
-
-<style lang="less" scoped>
-</style>
+ views/About/index.vue
+ views/Anmelden/index.vue
+ views/Detail/index.vue
+ views/Einkaufswagen/index.vue
+ views/Home/index.vue
+ views/Kontakt/index.vue
+ views/Produkt/index.vue
+ views/Search/index.vue
+ views/Register/index.vue
 ```
-
-2. pages/Search/index.vue
-```vue
-<template>
-  <div>Search</div>
-</template>
-
-<script>
-export default {
-  name: 'Search',
-  data () {
-    return {}
-  },
-}
-</script>
-
-<style lang="less" scoped>
-
-</style>
-```
-
-3. pages/Register/index.vue
-```vue
-<template>
-  <div>Register</div>
-</template>
-
-<script>
-export default {
-  name: 'Register',
-  data () {
-    return {}
-  },
-}
-</script>
-
-<style  lang="less" scoped>
-
-</style>
-```
-
-4. pages/Login/index.vue
-
-```vue
-<template>
-  <div>Login</div>
-</template>
-
-<script>
-export default {
-  name: 'Login',
-  data () {
-    return {}
-  },
-}
-</script>
-
-<style  lang="less" scoped>
-
-</style>
-```
-
-5. router/routes.js
+2. router/index.js
 ```js
-import Home from '@/pages/Home'
-import Search from '@/pages/Search'
-import Register from '@/pages/Register'
-import Login from '@/pages/Login'
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+import HomeView from '../views/Home/index.vue'
+import AboutView from '../views/About/index.vue'
+import ProduktView from '../views/Produkt/index.vue'
+import DetailView from '../views/Detail/index.vue'
+import KontaktView from '../views/Kontakt/Kontaktrechts.vue'
+import OrderView from '../views/Einkaufswagen/index.vue'
+import LoginView from '../views/Anmelden/LoginView.vue'
+import RegistrierenView from '../views/Register'
 
-/* 
-所有静态路由配置的数组
-*/
-export default [
-  {
-    path: '/',
-    component: Home
-  },
-
-  {
-    path: '/search',
-    component: Search
-  },
-
-  {
-    path: '/register',
-    component: Register
-  },
-
-  {
-    path: '/login',
-    component: Login
-  }
-]
-```
-
-6. router/index.js
-```js
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import routes from './routes'
-
-// 声明使用插件
 Vue.use(VueRouter)
 
-// 向外默认暴露路由器对象
-export default new VueRouter({
-  mode: 'history', // 没有#的模式
-  routes, // 注册所有路由
+const routes = [
+  {
+    path: '/',
+    redirect: '/home'
+  },
+  {
+    path: '/home',
+    name: 'home',
+    component: HomeView
+  },
+  {
+    path: '/about',
+    name: 'about',
+    component: AboutView
+  },
+  {
+    path: '/produkt',
+    name: 'produkt',
+    meta:{
+      keepAlive: true 
+    },
+    component: ProduktView
+  },
+  {
+    path: '/detail/:id',
+    // path:'/detail',
+    // query:{id:detailsId},
+    name: 'detail',
+    component: DetailView
+  },
+  {
+    path: '/kontakt',
+    name: 'kontakt',
+    component:KontaktView
+  },
+  {
+    path: '/order',
+    name: 'order',
+    component:OrderView
+  },
+  {
+    path: '/search',
+    name: 'search',
+    component: SearchView
+  },
+  {
+      path: '/login',
+      name: 'login',
+      component:LoginView
+    },
+  {
+      path: '/',
+      name: 'registrieren',
+      component:RegistrierenView
+    }
+]
+
+const router = new VueRouter({
+  linkExactActiveClass:'active',
+  routes
 })
+export default router
+```
+3. statische Komponenten  erstellen
+
+```vue
+  views/NavBottom.vue
+  views/Footer.vue
 ```
 
-7. main.js
-```js
-import Vue from 'vue'
-import App from './App.vue'
-import router from './router'
-
-Vue.config.productionTip = false
-
-new Vue({
-  render: h => h(App),
-  router, // 注册路由器
-}).$mount('#app')
-```
-
-8. components/Header/index.vue
+4. App.vue
 ```vue
 <template>
-  <div>Header</div>
+  <div id="app">
+    <div class="NavButton">
+      <NavBottom />
+    </div>
+    <div class="inhalt">
+      <router-view />
+    </div>
+    <div class="footer">
+      <Footer />
+    </div>
+  </div>
 </template>
 
 <script>
-export default {
-  name: 'Header',
-  data () {
-    return {}
-  },
-}
+import NavBottom from "./views/NavBottom.vue";
+import Footer from "./views/Footer.vue";
+
+export default {
+  components: {
+    NavBottom,
+    Footer,
+  },
+};
 </script>
 
-<style  lang="less" scoped>
-
+<style lang="scss">
+#app {
+  .NavButton {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 102;
+    padding: 1rem 10%;
+  }
+  .inhalt {
+    margin: 7rem 10% 4rem 10%;
+    // margin: 0 auto;
+  }
+}
 </style>
+
 ```
+## 6.2 jsconfig.json
 
-9. components/Footer/index.vue
-```vue
-<template>
-  <div>Footer</div>
-</template>
-
-<script>
-export default {
-  name: 'Footer',
-  data () {
-    return {}
-  },
-}
-</script>
-
-<style  lang="less" scoped>
-
-</style>
-```
-
-10. App.vue
-```vue
-<template>
-  <div>
-    <Header/>
-    <router-view></router-view>
-    <Footer/>
-  </div>
-</template>
-
-<script>
-import Header from './components/Header'
-import Footer from './components/Footer'
-
-export default {
-  name: 'App',
-
-  components: {
-    Header,
-    Footer
-  }
-}
-</script>
-
-<style lang="less" scoped>
-
-</style>
-```
-
-11. public/css/reset.css
-```css
-/* 清除内外边距 */
-body, h1, h2, h3, h4, h5, h6, hr, p, blockquote,
-dl, dt, dd, ul, ol, li,
-pre,
-fieldset, lengend, button, input, textarea,
-th, td {
-    margin: 0;
-    padding: 0;
-}
-
-/* 设置默认字体 */
-body,
-button, input, select, textarea { /* for ie */
-    /*font: 12px/1 Tahoma, Helvetica, Arial, "宋体", sans-serif;*/
-    font: 12px/1.3 "Microsoft YaHei",Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif; /* 用 ascii 字符表示，使得在任何编码下都无问题 */
-    color: #333;
-}
-
-h1 { font-size: 18px; /* 18px / 12px = 1.5 */ }
-h2 { font-size: 16px; }
-h3 { font-size: 14px; }
-h4, h5, h6 { font-size: 100%; }
-
-address, cite, dfn, em, var, i{ font-style: normal; } /* 将斜体扶正 */
-b, strong{ font-weight: normal; } /* 将粗体扶细 */
-code, kbd, pre, samp, tt { font-family: "Courier New", Courier, monospace; } /* 统一等宽字体 */
-small { font-size: 12px; } /* 小于 12px 的中文很难阅读，让 small 正常化 */
-
-/* 重置列表元素 */
-ul, ol { list-style: none; }
-
-/* 重置文本格式元素 */
-a { text-decoration: none; color: #666;}
-a:hover{
-    color : rgb(79, 76, 212) !important;
-}
-
-/* 重置表单元素 */
-legend { color: #000; } /* for ie6 */
-fieldset, img { border: none; }
-button, input, select, textarea {
-    font-size: 100%; /* 使得表单元素在 ie 下能继承字体大小 */
-}
-
-/* 重置表格元素 */
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-/* 重置 hr */
-hr {
-    border: none;
-    height: 1px;
-}
-.clearFix::after{
-    content:"";
-    display: block;
-    clear:both;
-}
-/* 让非ie浏览器默认也显示垂直滚动条，防止因滚动条引起的闪烁 */
-html { overflow-y: scroll; }
-
-/* 清除浮动 */
-.clearfix::after {
-    display: block;
-    height: 0;
-    content: "";
-    clear: both;
-    visibility: hidden;
-}
-```
-
-12. public/index.html
-```html
-<link rel="stylesheet" href="/css/reset.css"> 
-<div id="app"></div>
-```
-
-## 6.3. 运行并请求不同路由路径
-查看运行效果
-
-## 6.4. jsconfig.json
 让vscode提示@开头的模块路径引入
 
 ```json

@@ -1,15 +1,6 @@
-# 13. 使用vuex管理状态
+# 13. Vuex – State Management
 
-## 13.1. 下载依赖包
-```shell
-npm install vuex
-```
-
-
-
-## 13.2. vuex的多模块编程
-
-- vuex单模块问题: 
+## 13.1 vuex单模块问题: 
   - 需要的管理状态数据比较多, 那对应的mutations/actions模块就会变得比较
   - 如果添加新的数据管理, 需要修改现在文件(不断向其添加内容) 
 - vuex多模块编程: 

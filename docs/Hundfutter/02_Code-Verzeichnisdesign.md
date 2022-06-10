@@ -1,3 +1,3 @@
 ## 2. Projektstructure design
 
-![image-code_tree](./images/code_tree.png)
+![image-code_tree](./images/Hund_code_tree.png)

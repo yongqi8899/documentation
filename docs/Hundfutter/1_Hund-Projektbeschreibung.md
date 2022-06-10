@@ -21,5 +21,8 @@ Beschreibung: Voll funktionsfähige Schnittstelle zum Ausführen der endgültige
 
 ![image-20201222063328068](./images/hund-tech.png)
 
+## 4. Vue Route
+![image-route](./images/hund-route.png)
+
 [zur Website](https://hundfutter.netlify.app/#/home)
 

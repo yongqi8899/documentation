@@ -5,9 +5,13 @@
  vue.config.js: die Regelprüfung wird deaktiviert
 
 ```js
-module.exports = {
-  lintOnSave: 'warning',
+devServer: {
+    overlay: {
+       warnings: false,
+       errors: false
+    },
 }
+lintOnSave: false
 ```
 
  

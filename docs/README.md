@@ -1,12 +1,12 @@
 ---
-# 首页
+# Home
 home: true  
 
-# 图标
+# Logo
 heroImage: /me_normal.svg
-# 按钮文本
+# Text
 actionText: zu den Projekten →
-# 按钮点击跳转路径
+# zur Website
 actionLink: /Hundfutter/1_Hund-Projektbeschreibung
 
 
