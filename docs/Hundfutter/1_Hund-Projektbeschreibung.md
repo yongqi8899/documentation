@@ -19,7 +19,7 @@ Beschreibung: Voll funktionsfähige Schnittstelle zum Ausführen der endgültige
 
 ## 3.Technische Auswahl
 
-![image-20201222063328068](./images/hund-tech.png)
+![image-tech](./images/hund-tech.png)
 
 ## 4. Vue Route
 ![image-route](./images/hund-route.png)

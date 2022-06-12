@@ -12,7 +12,7 @@ module.exports = {
     sidebar: [ // 左侧导航
       'Hundfutter/1_Hund-Projektbeschreibung.md',
       {
-        title: 'Detaillierte Entwicklung',
+        title: 'Hundfutter Detaillierte Entwicklung',
         collapsable: true,
         children: [
           'Hundfutter/01_Starten.md',
@@ -28,10 +28,19 @@ module.exports = {
           'Hundfutter/11_vuex',
           'Hundfutter/12_Search',
           'Hundfutter/13_Detail',
-          'Hundfutter/14_AddCartSuccess',
-          'Hundfutter/15_Einkaufswagen',
-          'Hundfutter/16_Anmelden und Register',
-          'Hundfutter/17_others'
+          'Hundfutter/14_Anmelden',
+          'Hundfutter/Anderes'
+        ]
+      },
+      'ThreeD/1_3D.md',
+      {
+        title: '3D Web Detaillierte Entwicklung',
+        collapsable: true,
+        children: [
+          'ThreeD/01._Blender.md',
+          'ThreeD/02._ThreeJs.md',
+          'ThreeD/03._Shaders.md',
+          'ThreeD/04._vue.md',
         ]
       }
     ]

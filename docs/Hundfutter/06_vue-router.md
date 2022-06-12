@@ -14,18 +14,11 @@
  views/Search/index.vue
  views/Register/index.vue
 ```
-2. router/index.js
+2. router/index.js: 
+vue-lazyload
 ```js
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HomeView from '../views/Home/index.vue'
-import AboutView from '../views/About/index.vue'
-import ProduktView from '../views/Produkt/index.vue'
-import DetailView from '../views/Detail/index.vue'
-import KontaktView from '../views/Kontakt/Kontaktrechts.vue'
-import OrderView from '../views/Einkaufswagen/index.vue'
-import LoginView from '../views/Anmelden/LoginView.vue'
-import RegistrierenView from '../views/Register'
 
 Vue.use(VueRouter)
 
@@ -37,12 +30,12 @@ const routes = [
   {
     path: '/home',
     name: 'home',
-    component: HomeView
+    component: HomeView = () => import('@/views/Home/index.vue')
   },
   {
     path: '/about',
     name: 'about',
-    component: AboutView
+    component: AboutView = () => import('../views/About/index.vue')
   },
   {
     path: '/produkt',
@@ -50,39 +43,37 @@ const routes = [
     meta:{
       keepAlive: true 
     },
-    component: ProduktView
+    component: ProduktView = () => import('../views/Produkt/index.vue')
   },
   {
     path: '/detail/:id',
-    // path:'/detail',
-    // query:{id:detailsId},
     name: 'detail',
-    component: DetailView
+    component: DetailView = () => import('../views/Detail/index.vue')
   },
   {
     path: '/kontakt',
     name: 'kontakt',
-    component:KontaktView
+    component:KontaktView = () => import('../views/Kontakt/Kontaktrechts.vue')
   },
   {
     path: '/order',
     name: 'order',
-    component:OrderView
+    component:OrderView = () => import('../views/Einkaufswagen/index.vue')
   },
   {
     path: '/search',
     name: 'search',
-    component: SearchView
+    component: SearchView = () => import('../views/Search')
   },
   {
       path: '/login',
       name: 'login',
-      component:LoginView
+      component:LoginView = () => import('../views/Anmelden/LoginView.vue')
     },
   {
       path: '/',
       name: 'registrieren',
-      component:RegistrierenView
+      component:RegistrierenView = () => import('../views/Register')
     }
 ]
 

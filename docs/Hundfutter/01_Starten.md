@@ -7,7 +7,7 @@ code:
 ```shell
 # 
 npm install -g @vue/cli
-vue create shop-client
-cd shop-client
+vue create hundfutter
+cd hundfutter
 npm run serve
 ```
