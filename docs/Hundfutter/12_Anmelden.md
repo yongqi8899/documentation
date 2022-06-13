@@ -1,16 +1,16 @@
-# 14. Anmelden und Registrieren
+# 12. Anmelden und Registrieren
 
-## 14.1. Aussehen
+## 12.1. Aussehen
 
 ![img](./images/hund-anmelden.png) 
 
-## 14.2 Detail Komponente Konstruktor
+## 12.2 Detail Komponente Konstruktor
 
 1. LoginView.vue: Banner
 2. Registrieren.vue: Detail
 3. index.vue: exportieren
 
-## 14.3 Code
+## 12.3 Code
 
 ```vue
 <template>
