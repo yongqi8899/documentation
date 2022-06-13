@@ -1,16 +1,16 @@
-# 13. Detail Komponent
+# 11. Detail Komponent
 
-## 13.1 Aussehen
+## 11.1 Aussehen
 
 ![img](./images/hund_detail.png) 
 
-## 13.2 Detail Komponente Konstruktor
+## 11.2 Detail Komponente Konstruktor
 
 1. DetailLeft.vue: Banner
 2. DetailRechts.vue: Detail
 3. index.vue: exportieren
 
-## 13.3 code
+## 11.3 code
 
 - DetailLeft.vue
 ```vue
@@ -286,17 +286,3 @@ export default {
 </style>
 
 ```
-
-
-
-
-
-# 
-
-## 13.1. Aussehen
-
-![img](./images/hund_detail.png) 
-
-## 
-
-
