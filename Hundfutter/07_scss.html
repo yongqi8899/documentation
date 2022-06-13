@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>7. scss Precompiler importieren | Yongqi Zhang</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    <link rel="shortcut icon" type="image/x-icon" href="/documentation/favicon.ico">
+    <meta name="description" content="Portfolio">
+    
+    <link rel="preload" href="/documentation/assets/css/0.styles.5d593f5e.css" as="style"><link rel="preload" href="/documentation/assets/js/app.5728a076.js" as="script"><link rel="preload" href="/documentation/assets/js/2.845fcafc.js" as="script"><link rel="preload" href="/documentation/assets/js/20.31b0d028.js" as="script"><link rel="prefetch" href="/documentation/assets/js/10.87cd31dc.js"><link rel="prefetch" href="/documentation/assets/js/11.5c9f89a9.js"><link rel="prefetch" href="/documentation/assets/js/12.7b5aece0.js"><link rel="prefetch" href="/documentation/assets/js/13.0ee5a125.js"><link rel="prefetch" href="/documentation/assets/js/14.6f7d0c6f.js"><link rel="prefetch" href="/documentation/assets/js/15.72c7fc2c.js"><link rel="prefetch" href="/documentation/assets/js/16.2b8c64d3.js"><link rel="prefetch" href="/documentation/assets/js/17.a7b8dee0.js"><link rel="prefetch" href="/documentation/assets/js/18.d1163869.js"><link rel="prefetch" href="/documentation/assets/js/19.91077451.js"><link rel="prefetch" href="/documentation/assets/js/21.5a7cdf51.js"><link rel="prefetch" href="/documentation/assets/js/22.c4d60295.js"><link rel="prefetch" href="/documentation/assets/js/23.582858c9.js"><link rel="prefetch" href="/documentation/assets/js/24.3dd1e644.js"><link rel="prefetch" href="/documentation/assets/js/25.94692ae3.js"><link rel="prefetch" href="/documentation/assets/js/26.e6290a3e.js"><link rel="prefetch" href="/documentation/assets/js/27.2a920935.js"><link rel="prefetch" href="/documentation/assets/js/28.29ff9ea0.js"><link rel="prefetch" href="/documentation/assets/js/3.f75eb2f7.js"><link rel="prefetch" href="/documentation/assets/js/4.95875522.js"><link rel="prefetch" href="/documentation/assets/js/5.3e3260db.js"><link rel="prefetch" href="/documentation/assets/js/6.99ff8bf6.js"><link rel="prefetch" href="/documentation/assets/js/7.21e47363.js"><link rel="prefetch" href="/documentation/assets/js/8.9faf01a4.js"><link rel="prefetch" href="/documentation/assets/js/9.7b4836f4.js">
+    <link rel="stylesheet" href="/documentation/assets/css/0.styles.5d593f5e.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/documentation/" class="home-link router-link-active"><!----> <span class="site-name">Yongqi Zhang</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="http://www.yongqi.ml" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Portfolio
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="http://www.yongqi.ml" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Portfolio
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/documentation/Hundfutter/1_Hund-Projektbeschreibung.html" class="sidebar-link">Hundfutter Web Shop</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Hundfutter Detaillierte Entwicklung</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/documentation/Hundfutter/01_Starten.html" class="sidebar-link">1. Start</a></li><li><a href="/documentation/Hundfutter/02_Code-Verzeichnisdesign.html" class="sidebar-link">2. Projektstructure design</a></li><li><a href="/documentation/Hundfutter/03_ESLint.html" class="sidebar-link">3. ESLint</a></li><li><a href="/documentation/Hundfutter/04_git.html" class="sidebar-link">4. Git-Repository anlegen</a></li><li><a href="/documentation/Hundfutter/05_Vue Components.html" class="sidebar-link">5. Vue</a></li><li><a href="/documentation/Hundfutter/06_vue-router.html" class="sidebar-link">6. vue-router</a></li><li><a href="/documentation/Hundfutter/07_scss.html" aria-current="page" class="active sidebar-link">7. scss Precompiler importieren</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/documentation/Hundfutter/07_scss.html#_7-1-abhangigkeitspakete-herunterladen" class="sidebar-link">7.1 Abhängigkeitspakete herunterladen</a></li><li class="sidebar-sub-header"><a href="/documentation/Hundfutter/07_scss.html#_7-2-scss-in-komponenten-verwenden" class="sidebar-link">7.2 scss in Komponenten verwenden</a></li><li class="sidebar-sub-header"><a href="/documentation/Hundfutter/07_scss.html#_7-3-reset" class="sidebar-link">7.3  reset</a></li><li class="sidebar-sub-header"><a href="/documentation/Hundfutter/07_scss.html#_7-4-main-style" class="sidebar-link">7.4  main style</a></li><li class="sidebar-sub-header"><a href="/documentation/Hundfutter/07_scss.html#_7-5-src-main-js" class="sidebar-link">7.5  src/main.js</a></li></ul></li><li><a href="/documentation/Hundfutter/08_Header.html" class="sidebar-link">8. Nav Komponent</a></li><li><a href="/documentation/Hundfutter/09_Footer.html" class="sidebar-link">9. Footer Komponent</a></li><li><a href="/documentation/Hundfutter/10_Home.html" class="sidebar-link">10. Home Komponent</a></li><li><a href="/documentation/Hundfutter/11_Detail.html" class="sidebar-link">11. Detail Komponent</a></li><li><a href="/documentation/Hundfutter/12_Search.html" class="sidebar-link">12. Search</a></li><li><a href="/documentation/Hundfutter/13_vuex.html" class="sidebar-link">13. Vuex – State Management</a></li><li><a href="/documentation/Hundfutter/14_Anmelden.html" class="sidebar-link">14. Anmelden und Registrieren</a></li><li><a href="/documentation/Hundfutter/Anderes.html" class="sidebar-link">Anderes</a></li></ul></section></li><li><a href="/documentation/ThreeD/1_3D.html" class="sidebar-link">3D Web</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>3D Web Detaillierte Entwicklung</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="_7-scss-precompiler-importieren"><a href="#_7-scss-precompiler-importieren" class="header-anchor">#</a> 7. scss Precompiler importieren</h1> <h2 id="_7-1-abhangigkeitspakete-herunterladen"><a href="#_7-1-abhangigkeitspakete-herunterladen" class="header-anchor">#</a> 7.1 Abhängigkeitspakete herunterladen</h2> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">npm</span> <span class="token function">install</span> -D node-sass@4.14.1 --save-dev
+<span class="token function">npm</span> <span class="token function">install</span> sass-loader@7.3.1 --save-dev
+<span class="token function">npm</span> <span class="token function">install</span> style-loader --save-dev
+</code></pre></div><h2 id="_7-2-scss-in-komponenten-verwenden"><a href="#_7-2-scss-in-komponenten-verwenden" class="header-anchor">#</a> 7.2 scss in Komponenten verwenden</h2> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>scss<span class="token punctuation">&quot;</span></span> <span class="token attr-name">scoped</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h2 id="_7-3-reset"><a href="#_7-3-reset" class="header-anchor">#</a> 7.3  reset</h2> <p>src/assets/global/css/reset.scss</p> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token comment">/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/</span>
+<span class="token selector">html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video </span><span class="token punctuation">{</span>
+	<span class="token property">margin</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+	<span class="token property">padding</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+	<span class="token property">border</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+	<span class="token property">font-size</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+	<span class="token property">font</span><span class="token punctuation">:</span> inherit<span class="token punctuation">;</span>
+	<span class="token property">vertical-align</span><span class="token punctuation">:</span> baseline<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">/* HTML5 display-role reset for older browsers */</span>
+<span class="token selector">article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section </span><span class="token punctuation">{</span>
+	<span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">body </span><span class="token punctuation">{</span>
+	<span class="token property">line-height</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">ol, ul </span><span class="token punctuation">{</span>
+	<span class="token property">list-style</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">blockquote, q </span><span class="token punctuation">{</span>
+	<span class="token property">quotes</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">blockquote:before, blockquote:after,
+q:before, q:after </span><span class="token punctuation">{</span>
+	<span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">;</span>
+	<span class="token property">content</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">table </span><span class="token punctuation">{</span>
+	<span class="token property">border-collapse</span><span class="token punctuation">:</span> collapse<span class="token punctuation">;</span>
+	<span class="token property">border-spacing</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+
+</code></pre></div><h2 id="_7-4-main-style"><a href="#_7-4-main-style" class="header-anchor">#</a> 7.4  main style</h2> <p>src/assets/global/css/main.scss</p> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token atrule"><span class="token rule">@charset</span> <span class="token string">&quot;utf-8&quot;</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">:</span>root</span> <span class="token punctuation">{</span>
+  <span class="token property">--themeColor</span><span class="token punctuation">:</span> #e87a90<span class="token punctuation">;</span>
+  <span class="token property">--text</span><span class="token punctuation">:</span> #337267<span class="token punctuation">;</span>
+  <span class="token property">--white</span><span class="token punctuation">:</span>#fff<span class="token punctuation">;</span>
+  <span class="token property">--orange</span><span class="token punctuation">:</span><span class="token function">rgb</span><span class="token punctuation">(</span>235<span class="token punctuation">,</span> 143<span class="token punctuation">,</span> 6<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">--blue</span><span class="token punctuation">:</span>#3498db<span class="token punctuation">;</span>
+  <span class="token property">--bgColor</span><span class="token punctuation">:</span>#dcdcdc<span class="token punctuation">;</span>
+  <span class="token property">--transparent</span><span class="token punctuation">:</span>#ffff0000<span class="token punctuation">;</span>
+  <span class="token property">--silber</span><span class="token punctuation">:</span> #c0c0c0<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">* </span><span class="token punctuation">{</span>
+  <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">&quot;Roboto&quot;</span><span class="token punctuation">,</span> sans-serif<span class="token punctuation">;</span>
+  <span class="token property">cursor</span><span class="token punctuation">:</span> <span class="token url">url</span><span class="token punctuation">(</span><span class="token string">&quot;../../img/flesh.png&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span> auto<span class="token punctuation">;</span>
+  <span class="token property">box-sizing</span><span class="token punctuation">:</span> border-box<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">h1,h2,i </span><span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--themeColor<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">h1</span><span class="token punctuation">{</span>
+  <span class="token property">font-size</span><span class="token punctuation">:</span> 1.5rem<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.layout </span><span class="token punctuation">{</span>
+  <span class="token comment">// margin-top: 4rem;</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  <span class="token property">flex-wrap</span><span class="token punctuation">:</span> nowrap<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.left </span><span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  <span class="token property">flex-direction</span><span class="token punctuation">:</span> column<span class="token punctuation">;</span>
+ 
+  <span class="token selector"><span class="token parent important">&amp;</span>.h2 </span><span class="token punctuation">{</span>
+    <span class="token property">align-self</span><span class="token punctuation">:</span> flex-start<span class="token punctuation">;</span>
+    <span class="token property">margin-bottom</span><span class="token punctuation">:</span> 5%<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.recht </span><span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> 2rem<span class="token punctuation">;</span>
+  <span class="token property">align-items</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.pkBg</span><span class="token punctuation">{</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--themeColor<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--white<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">a</span><span class="token punctuation">{</span>
+  <span class="token property">text-decoration</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// -----------button style-----------</span>
+<span class="token atrule"><span class="token rule">@media</span> only screen <span class="token operator">and</span> <span class="token punctuation">(</span><span class="token property">max-width</span><span class="token punctuation">:</span> 768px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+  <span class="token selector">.layout </span><span class="token punctuation">{</span>
+    <span class="token property">flex-wrap</span><span class="token punctuation">:</span> wrap<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector">.left </span><span class="token punctuation">{</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span>40<span class="token punctuation">,</span> 101<span class="token punctuation">,</span> 183<span class="token punctuation">,</span> 0<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector">.recht </span><span class="token punctuation">{</span>
+    <span class="token property">z-index</span><span class="token punctuation">:</span> 10<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><h2 id="_7-5-src-main-js"><a href="#_7-5-src-main-js" class="header-anchor">#</a> 7.5  src/main.js</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> <span class="token string">'./assets/global/css/reset.scss'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">'./assets/global/css/main.scss'</span><span class="token punctuation">;</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/documentation/Hundfutter/06_vue-router.html" class="prev">
+        6. vue-router
+      </a></span> <span class="next"><a href="/documentation/Hundfutter/08_Header.html">
+        8. Nav Komponent
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/documentation/assets/js/app.5728a076.js" defer></script><script src="/documentation/assets/js/2.845fcafc.js" defer></script><script src="/documentation/assets/js/20.31b0d028.js" defer></script>
+  </body>
+</html>
