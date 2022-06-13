@@ -5,7 +5,7 @@ Die Augen sagen mehr als tausend Worte. Wissenschaftliche Studien zeigen, dass d
 
 1. Dieses Projekt ist eine Online-E-Commerce-Web-App 
 
-2. Einschließlich Homepage, Suchliste, Produktdetails, Warenkorb, Bestellung & Zahlung, Benutzerregistrierung & Login und andere Untermodule
+2. Einschließlich Homepage, Suchliste, Produktdetails, Warenkorb, Benutzerregistrierung & Login und andere Untermodule
 
 3. Verwenden Sie die neuesten und heißesten Front-End-Technologien wie Vue  + ES6++ Webpack, Route Lazy Loading, zwischengespeichert mit Keep-Alive, Bild lazy loading u.s.w.
 
