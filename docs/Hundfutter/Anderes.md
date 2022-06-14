@@ -39,7 +39,12 @@ Home = () => import('@/pages/Home')
  npm install vue-template-compiler@2.6.14
 ```
 
+## zwischengespeichert mit Keep-Alive
+```vue
 
+```
+
+ 
 
  
 
@@ -48,5 +53,6 @@ Home = () => import('@/pages/Home')
  
 
  
+
 
  

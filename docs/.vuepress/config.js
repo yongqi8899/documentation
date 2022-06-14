@@ -27,8 +27,7 @@ module.exports = {
           'Hundfutter/10_Home',
           'Hundfutter/11_Detail',
           'Hundfutter/12_Anmelden',
-          'Hundfutter/13_vuex',
-          'Hundfutter/14_Gemeinsam_Komponent.md',
+          'Hundfutter/13_Gemeinsam_Komponent.md',
           'Hundfutter/Anderes'
         ]
       },

@@ -1,4 +1,4 @@
-# 7. scss Precompiler importieren
+# 7. scss Precompiler 
 
 ## 7.1 Abhängigkeitspakete herunterladen
 ```shell

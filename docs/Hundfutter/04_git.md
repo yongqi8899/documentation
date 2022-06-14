@@ -1,5 +1,5 @@
 
-# 4. Git-Repository anlegen
+# 4. Git
 
 ## 4.1. neues repository erstellen
 
