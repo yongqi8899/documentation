@@ -39,15 +39,15 @@ main.js
 
 ```js
 import VueLazyload from 'vue-lazyload';
-
 Vue.use(VueLazyload)
 ```
 
 
 #### 3) code
-    produkt.vue
+   - produkt.vue
+
     ```vue
-    <div>
+      <div>
         <img src="@/assets/img/loading.gif" v-lazy="produkt.card" alt="" />
       </div>
     ```
