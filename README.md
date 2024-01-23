@@ -11,4 +11,4 @@
   - git commit -m "init"
   - git push 
 - 发布文档: npm run doc:deploy
-- 访问在线文档: https://yongqi.ml/documentation/ 
+- 访问在线文档: 

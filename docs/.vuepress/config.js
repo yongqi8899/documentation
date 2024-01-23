@@ -7,7 +7,7 @@ module.exports = {
   
   themeConfig: { // 主题配置
     nav: [ // 头部导航
-      { text: 'Portfolio', link: 'http://www.yongqi.ml' },
+      { text: 'Portfolio', link: 'https://lustrous-peony-4c3c64.netlify.app/' },
     ],
     sidebar: [ // 左侧导航
       'Hundfutter/1_Hund-Projektbeschreibung.md',
